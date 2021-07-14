@@ -1,0 +1,113 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "username": "will",
+            "password": "password",
+            "firstname": "william",
+            "lastname": "henry",
+            "email": "will@gmail.com",
+            "firstProperty": "10A",
+            "secondProperty": "10B",
+            "thirdProperty": "6C"
+        }
+    ],
+    "required": [
+        "username",
+        "password",
+        "firstname",
+        "lastname",
+        "email",
+        "firstProperty",
+        "secondProperty",
+        "thirdProperty"
+    ],
+    "properties": {
+        "username": {
+            "$id": "#/properties/username",
+            "type": "string",
+            "title": "The username schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "will"
+            ]
+        },
+        "password": {
+            "$id": "#/properties/password",
+            "type": "string",
+            "title": "The password schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "password"
+            ]
+        },
+        "firstname": {
+            "$id": "#/properties/firstname",
+            "type": "string",
+            "title": "The firstname schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "william"
+            ]
+        },
+        "lastname": {
+            "$id": "#/properties/lastname",
+            "type": "string",
+            "title": "The lastname schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "henry"
+            ]
+        },
+        "email": {
+            "$id": "#/properties/email",
+            "type": "string",
+            "title": "The email schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "will@gmail.com"
+            ]
+        },
+        "firstProperty": {
+            "$id": "#/properties/firstProperty",
+            "type": "string",
+            "title": "The firstProperty schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "10A"
+            ]
+        },
+        "secondProperty": {
+            "$id": "#/properties/secondProperty",
+            "type": "string",
+            "title": "The secondProperty schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "10B"
+            ]
+        },
+        "thirdProperty": {
+            "$id": "#/properties/thirdProperty",
+            "type": "string",
+            "title": "The thirdProperty schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "6C"
+            ]
+        }
+    },
+    "additionalProperties": true
+}

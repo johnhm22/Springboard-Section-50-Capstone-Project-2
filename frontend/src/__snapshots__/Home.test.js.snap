@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Home"
+  >
+    <div
+      class="container-fluid text-center"
+    >
+      <h1
+        class="b-4 font-weight-bold"
+      >
+        Welcome to ManageMyProperty
+      </h1>
+      <h2>
+        All the tools in one convenient place!
+      </h2>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -44,7 +44,7 @@ function App() {
 }
 
 
-//LOGOUT useHISTORY NOT WORKING
+
 async function logout() {
   console.log("currentUser before logout: ", currentUser);
   setUser('');

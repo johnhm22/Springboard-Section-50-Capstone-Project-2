@@ -53,7 +53,10 @@ Going back to the <Router> tag, it has a couple of props. There is the component
 You may also notice the LoginForm component contains a prop shown as login = {login}. This is a function called login that is passed to the LoginForm where it will be called, but executed on the App.js component where is it defined. In this particular case, the function will validate the login details of the user and allow access to the app. This practice has been widely used throughout the app.
   
   
-One of the key features of React is hooks. In particular useState and useEffect have been used in various places. These allow great flexibility. React allows variable values to be passed down from component to component using props. The drawback is that the value of the prop cannot change. So, if you want to display something dynamic, such as the number of open issues, this is difficult. State in React allows us to set the value of state and, using a function, update it.
+One of the key features of React is hooks. In particular useState and useEffect have been used in various places. These allow great flexibility. React allows variable values to be passed down from component to component using props. The drawback is that the value of the prop cannot change. So, if you want to display something dynamic, such as the number of open issues, this is difficult. State in React allows us to set the value of state and, using a function, update it.  
+  
+Below is an example of how useState is deployed. It can used to keep track of the logged in user. Upon login, the verified user details are used to update currentUser using the setUser function. This is then passed to each component and used as a verification check before rendering data in the browser.  
+  useState is also used to hold the latest version of the issues and a function, updateIssues, is defined and passed to components to be executed when the issues need updating.
   
   
   ![](images/useState.png)
@@ -79,7 +82,16 @@ Another hook, useParams, is used to identify variables in the url string. For ex
   
   
   #### Tests  
+Component tests can be found in the same folder as the components. They are identified by componentName.test.js. They consist of a smoke and snapshot test and a number of tests using matcher methods from React Testing Library.  
+  
+These tests can be executed in the terminal using the command npm test to run all tests or you can specifcy a test file to run.
+  
+Route tests
+  
+  
   Where they are and how to run them
+  
+  
   
   
 What the app does

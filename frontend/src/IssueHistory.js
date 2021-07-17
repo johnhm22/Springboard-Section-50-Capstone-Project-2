@@ -6,6 +6,7 @@ import moment from "moment";
 import axios from 'axios';
 import IssueUpdateForm from './IssueUpdateForm';
 import './IssueHistory.css';
+import {v4 as uuid} from "uuid";
 
 
 
@@ -24,7 +25,6 @@ function IssueHistory () {
     async function updateHistory(update_by, description, checked) {
         try {
             //add in authentication of username and password
-            console.log("checked is: ", checked);
             const status = checked === true? 'closed': 'open'
             console.log("status in updateHistory function ", status);
             let res = await axios({
@@ -61,7 +61,7 @@ if(loggedInUser){
     return(
         <>
         <div className="issueHistory container mt-5">
-            <div className="row justify-content-md-center">
+            <div className="row justify-content-center">
                 <div className="col-8">
                 <h4>Issue history</h4>
                 <table className="table table-striped">

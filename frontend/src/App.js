@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import UserContext from './userContext';
 import Home from './Home';
 import NavBar from './NavBar';
@@ -13,7 +13,7 @@ import axios from "axios";
 import IssueUpdateForm from './IssueUpdateForm';
 import AddIssueForm from './AddIssueForm';
 import AllIssuesList from './AllIssuesList';
-
+import UserProfile from './UserProfile';
 
 
 
@@ -24,11 +24,10 @@ function App() {
   const [issues, setIssues] = useState();
 
   const updateIssues = (issues) => {
-    setIssues(issues);
+        setIssues(issues);
   }
 
   async function login(username, password) {
-    console.log("username and password in App.js login function", username, password)
     try {
         const res = await axios({
           method: 'post',
@@ -72,50 +71,12 @@ async function signup(username, password, firstname, lastname, email, firstPrope
         }
     })
     setUser(res.data.user);
-    console.log("currentUser ", currentUser);
   }
     catch(err) {
       console.log("There has been an error", err);
     }
 }
 
-
-  
-//
-
-
-// async function updateProfile(username, firstName, lastName, email, password) {
-// try {
-//   if(!password){
-//     throw "Password is not recognised";
-//   };
-//   let res = await axios({
-//     method: 'patch',
-//     url: `http://localhost:3001/users/${username}`,
-//     data: {
-//       password,
-//       firstName,
-//       lastName,
-//       email
-//     }
-//   })
-// } catch(err) {
-//   console.log("Couldn't update profile");
-// }
-// }
-
-// useEffect(() => {
-//   async function getUser(currentUser) {
-//         try{
-//         let res = await axios.get(`http://localhost:3001/users/${currentUser}`)
-//         console.log("res from useEffect in App: ", res);
-//         setUser(res.data.user);
-//         }
-//         catch(err){
-//           console.log("There is an error with getting the user");
-//         }
-//       }
-//     }, [currentUser, token])
 
   return (
     <UserContext.Provider value={currentUser}>
@@ -134,6 +95,9 @@ async function signup(username, password, firstname, lastname, email, firstPrope
         </Route>
         <Route exact path='/signup'>
         <SignupForm signup={signup}/>
+        </Route>
+        <Route exact path='/user/:user/profile'>
+        <UserProfile />
         </Route>
         <Route exact path='/issues/'>
         <AllIssuesList issues = {issues} updateIssues = {updateIssues}/>

@@ -35,7 +35,6 @@ router.get("/:user/add", async function(req, res){
 })
 
 router.patch("/:user/add", async function(req, res, next){
-    console.log("req.body issue add ", req.body);
     const result = jsonschema.validate(req.body, addIssueSchema);
     if(!result.valid){
         const listOfErrors = result.errors.map(e => e.stack);
@@ -64,7 +63,6 @@ router.get("/:user/:id/history", async function(req, res){
 
 
 router.patch("/:user/:id/history", async function(req, res){
-    console.log("history update route called")
     const {update_by, description, status} = req.body;
     //user owning issue or admin should be able to update
     //need to record username accodint to how is logged in

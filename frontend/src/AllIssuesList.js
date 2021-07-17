@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import EstateApi from './api';
 import moment from "moment";
 import UserContext from './userContext';
+import './AllIssuesList.css'
 
 
 function AllIssuesList ({updateIssues, issues}) {
@@ -19,15 +20,13 @@ function AllIssuesList ({updateIssues, issues}) {
     }
 
     useEffect( () => {
-        console.log("useEffect called");
         async function getAllIssues() {
             let issues = await EstateApi.getAllIssues();
-            console.log("issues ", issues);
             handleUpdateIssues(issues)
             setIsLoading(false);
         }
         getAllIssues();
-        }, [] 
+        }, []
         )
 
         if (isLoading) {
@@ -36,9 +35,9 @@ function AllIssuesList ({updateIssues, issues}) {
           
     return(
         <>
-        <div className="container mt-5">
+        <div className="container col-lg-8 allissueslist mt-5">
             <div className="row justify-content-md-center">
-                <div className="col-6">
+                <div className="col-8">
                 <h4>All issues</h4>
                 <table className="table table-striped">
                 <thead>

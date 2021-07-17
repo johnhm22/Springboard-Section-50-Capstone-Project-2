@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from "react-router-dom";
 import './LoginForm.css';
 import { useFormik } from 'formik';
@@ -33,32 +33,9 @@ const LoginForm = ({login}) => {
         },
     });
 
-    
-    // const initialState = {
-    //     username: "",
-    //     password: ""
-    // }
-    // const [formData, setFormData] = useState(initialState);
-
-
-// const handleChange = (e) => {
-//     const {name, value} = e.target;
-//     setFormData(formdata => ({
-//         ...formdata,
-//         [name]: value
-//     }))
-// }
-
-// const handleSubmit = (e) => {
-//     e.preventDefault();
-//     const {username, password} = formData;
-//     login(username, password);
-//     setFormData(initialState);
-//     history.push('/');
-// }
 
 return (
-    <div className="container col-lg-6">
+    <div className="container loginform col-lg-6">
         <div className="row justify-content-md-center">
         <div className="col-6">
         <form method="get" onSubmit={formik.handleSubmit} className="mt-3">
@@ -87,7 +64,7 @@ return (
             placeholder="Enter password..." />
             {formik.errors.password ? <div style={{color:'red'}}>{formik.errors.password}</div> : null}
             </div>
-            <button className="btn btn-primary btn-sm float-right">Log in</button>
+            <button type="submit" className="btn btn-primary btn-sm float-right">Log in</button>
         </form>
         </div>
         </div>

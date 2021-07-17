@@ -1,5 +1,5 @@
+import React, { useContext } from "react";
 import { useParams, Redirect } from 'react-router-dom';
-import React, {useContext} from "react";
 import UserContext from './userContext';
 import IssueHistory from './IssueHistory';
 import moment from "moment";
@@ -12,18 +12,14 @@ function Issue ({issues}) {
 
     const {id} = useParams();
 
-
-    const issueDetail = issues.filter(issue => issue.id === parseInt(id));
-    console.log("issueDetail: ", issueDetail);
-
-   
+    const issueDetail = issues.filter(issue => issue.id === parseInt(id));   
 
     if(loggedInUser){
     return(
         <>
-        <div className="container mt-5">
+        <div className="container issue col-lg-8 mt-5">
             <div className="row justify-content-md-center">
-                <div className="col-8">
+                <div className="col-12">
                 <table className="table table-striped">
                 <thead>
                     <tr>

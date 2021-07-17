@@ -6,7 +6,6 @@ import UserContext from "./userContext";
 
 function NavBar({logout}) {
   const user = useContext(UserContext);
-  console.log("user in NavBar ", user);
   if(user){
     return (
         <div>
@@ -15,7 +14,7 @@ function NavBar({logout}) {
                 <div className="navbar navbar-light">
                     <div className="navbar-nav">
                     <span className="nav-item nav-link">Hello {user.firstname}</span>
-                    <Link className="nav-item nav-link" to="/users/profile">My Profile</Link>
+                    <Link className="nav-item nav-link" to={`/user/${user.username}/profile`}>My Profile</Link>
                     <Link className="nav-item nav-link" to="/issues">{user.is_admin ? <span>All issues</span>:<span></span>}</Link>
                     <Link className="nav-item nav-link" to={`/issues/${user.username}`}>My Issues</Link>
                     <Link className="nav-item nav-link" onClick={logout}>Logout</Link>
@@ -25,7 +24,7 @@ function NavBar({logout}) {
         </div>      
         );
         }
-            {
+        
       return (
                 <div>
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -41,7 +40,7 @@ function NavBar({logout}) {
                 </div>
               );
 
-            }
+
 }
 
 export default NavBar;

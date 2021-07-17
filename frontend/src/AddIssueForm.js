@@ -2,13 +2,14 @@ import React, { useState, useContext } from 'react';
 import { useParams, useHistory, Redirect } from 'react-router-dom';
 import UserContext from './userContext';
 import EstateApi from './api';
+import './AddIssueForm.css'
 
 const AddIssueForm = () => {
 
     // causes error with smoke test
     const loggedInUser = useContext(UserContext);
 
-    //stops smoke test
+
     const {user} = useParams();
     
     const history = useHistory();
@@ -78,7 +79,7 @@ const handleSubmit = (e) => {
 
 if(loggedInUser){
 return (
-    <div className="container">
+    <div className="container col-lg-6 addissue">
         <div className="row justify-content-md-center">
             <div className="col-6">
                 <form method="get" onSubmit={handleSubmit} className="mt-3">

@@ -19,8 +19,6 @@ const IssueUpdateForm = ({updateHistory}) => {
 
 
 const handleChange = (e) => {
-    console.log("e.target", e.target)
-    console.log("e.target.checked", e.target.checked);
     const checked = e.target.checked;
     const {name, value} = e.target;
     setFormData(formdata => ({
@@ -32,7 +30,6 @@ const handleChange = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("formData in handleSubmit", formData);
     const {description, checked} = formData;
     updateHistory(username, description, checked);
     setFormData(initialState);
@@ -41,7 +38,7 @@ const handleSubmit = (e) => {
 if(loggedInUser){
 return (
     <div className="updateIssue container">
-        <div className="row justify-content-md-center">
+        <div className="row justify-content-center">
             <div className="col-6">
             <form method="get" onSubmit={handleSubmit} className="mt-3">
                 <h5>Update issue</h5>     

@@ -1,10 +1,15 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+// import { render } from '@testing-library/react';
+import {render} from './test-utils';
 import AllIssuesList from './AllIssuesList';
 
+
+//fails
+//Cannot read property 'username' of undefined
 it('renders without crashing', () => {
   render(<AllIssuesList />);
 });
+
 
 // it('matches snapshot', () => {
 //     const {asFragment} = render(<AllIssuesList />);

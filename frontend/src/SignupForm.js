@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router';
 import './SignupForm.css';
 import { useFormik } from 'formik';
@@ -53,30 +53,6 @@ const SignupForm = ({signup}) => {
     });
 
    
-
-
-// const handleChange = (e) => {
-//     setIsTouched(true);
-//     const {name, value} = e.target;
-//     if(value === '') {
-//         setIsInvalid(true);
-//     } else {
-//         setIsInvalid(false);
-//     }
-//     setFormData(formdata => ({
-//         ...formdata,
-//         [name]: value
-//     }))
-// }
-
-// const handleSubmit = (e) => {
-//     e.preventDefault();
-//     const {username, password, firstname, lastname, email, firstProperty, secondProperty, thirdProperty} = formData;
-//     signup(username, password, firstname, lastname, email, firstProperty, secondProperty, thirdProperty);
-//     setFormData(initialState);
-//     history.push('/');
-// }
-
 return (
     <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
         <div className="row justify-content-md-center">

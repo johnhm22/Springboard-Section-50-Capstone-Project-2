@@ -1,15 +1,12 @@
 const express = require("express");
 const { ExpressError } = require("../expressError");
 const db = require("../db");
-// const { default: Issue } = require("../../frontend/src/Issue");
 const User = require("../models/users");
+const Issue = require("../models/issues");
 const jsonschema = require("jsonschema");
 const logInSchema = require("../schemas/logInSchema.json");
 const registerSchema = require("../schemas/registerSchema.json");
-// const jwt = require("jsonwebtoken");
-// const { SECRET_KEY } = require("../config");
-// const { createToken } = require("../helpers/tokens");
-// const { json } = require("express");
+
 
 
 const router = new express.Router();
@@ -20,6 +17,7 @@ router.get("/logout", async function(req, res){
 })
 
 router.post("/login", async function(req, res, next){
+    console.log("backend login route reached");
 try{
     const result = jsonschema.validate(req.body, logInSchema);
     if(!result.valid){
@@ -60,6 +58,16 @@ router.post("/register", async function(req, res, next){
         return next(err);
         }
 
+});
+
+router.get("/:user/profile/count", async function(req, res, next){
+    console.log("req.params.user in routes", req.params.user)
+    try{
+    const count = await Issue.getIssueCountByUser(req.params.user)
+    return res.status(200).json({...count});
+    } catch(err){
+        return next(err);
+    }
 });
 
 

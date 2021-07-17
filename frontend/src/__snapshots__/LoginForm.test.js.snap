@@ -3,7 +3,7 @@
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="container"
+    class="container col-lg-6"
   >
     <div
       class="row justify-content-md-center"
@@ -15,9 +15,9 @@ exports[`matches snapshot 1`] = `
           class="mt-3"
           method="get"
         >
-          <h2>
+          <h3>
             Log In
-          </h2>
+          </h3>
           <div
             class="form-group"
           >
@@ -49,7 +49,7 @@ exports[`matches snapshot 1`] = `
             />
           </div>
           <button
-            class="btn btn-primary"
+            class="btn btn-primary btn-sm float-right"
           >
             Log in
           </button>

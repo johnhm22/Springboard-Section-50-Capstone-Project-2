@@ -19,10 +19,8 @@ function IssuesList ({updateIssues, issues}) {
     }
 
     useEffect( () => {
-        console.log("useEffect called");
         async function getIssuesByUser(user) {
             let issues = await EstateApi.getIssuesByUser(user);
-            console.log("issues ", issues);
             handleUpdateIssues(issues)
             setIsLoading(false);
         }
@@ -37,8 +35,8 @@ function IssuesList ({updateIssues, issues}) {
     if(loggedInUser){
         return(
             <>
-            <div className="issueList container col-lg-6 mt-5">
-                <div className="row justify-content-md-center">
+            <div className="container issuelist col-lg-6 mt-5">
+                <div className="row justify-content-center">
                     <div className="col-8">
                     <h4>Issues you have raised</h4>
                     <table className="table table-striped">

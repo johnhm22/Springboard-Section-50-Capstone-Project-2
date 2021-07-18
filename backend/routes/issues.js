@@ -1,7 +1,4 @@
 const express = require("express");
-const db = require("../db");
-// const { getIssuesByUser } = require("../models/issues");
-// const { default: Issue } = require("../../frontend/src/Issue");
 const Issue = require("../models/issues");
 const jsonschema = require("jsonschema");
 const addIssueSchema = require("../schemas/addIssueSchema.json");

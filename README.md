@@ -78,10 +78,17 @@ Another hook, useParams, is used to identify variables in the url string. For ex
 
   
   #### Backend  
-The backend consists principally of routes and models. The route files, as the same suggests, define the url route and action that is taken when the url is hit by the browser. The models define the sql queries that are called by the routes. Such queries maybe, for example retrieving all issues from the database, which is then presented then returned  by the route to the frontend.
+The backend consists principally of routes and models. It is coded in Node.js. The route files, as the same suggests, define the url route and action that is taken when the url is hit by the browser. The models define the sql queries that are called by the routes. Such queries maybe, for example retrieving all issues from the database, which is then presented then returned  by the route to the frontend.
 
-
+Express is a well-known web development framework for node that is used by the routes. It has to be installed and required in the route files. 
   
+There are just two route files; issues and users. They cover the http request methods get, post and patch.
+
+Similarly, there are two model files, users and issues.
+  
+  
+
+
   #### Tests  
 Component tests can be found in the same folder as the components. They are identified by componentName.test.js. They consist of a smoke and snapshot test and a number of tests using matcher methods from React Testing Library.  
   

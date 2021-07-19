@@ -78,13 +78,11 @@ Another hook, useParams, is used to identify variables in the url string. For ex
 
   
 #### Backend  
-The backend consists principally of routes and models. It is coded in Node.js. The route files, as the same suggests, define the url route and action that is taken when the url is hit by the browser. The models define the sql queries that are called by the routes. Such queries maybe, for example retrieving all issues from the database, which is then presented then returned  by the route to the frontend.
+The backend consists principally of routes and models. It is coded in Node.js. The route files, as the same suggests, define the url route and action that is taken when the url is hit by the browser. The models define the sql queries that are called by the routes. Such queries maybe, for example, retrieving all issues from the database, which is then presented and returned by the route to the frontend.
 
 Express is a well-known web development framework for node that is used by the routes. It has to be installed and required in the route files.  
   
-There are just two route files; issues and users. They cover the http request methods get, post and patch.  
-
-Similarly, there are two model files, users and issues.  
+There are just two route files; issues and users. They cover the http request methods get, post and patch. Similarly, there are two model files, users and issues.  
   
 Other key features of the backend are:  
 
@@ -92,10 +90,10 @@ Other key features of the backend are:
 These are files that define the format expected for json files such as those received from the frontend for login, register, update issue, and add issue. Using the library  jsonschema we can ensure that the format meets our expectations.
 
 ##### db.js  
-This file provides the details to connect to the database. It employs the tool pg which enables you to make a connection to the database and execute sql queries.  
+This file provides the details to connect to the database. It employs the tool pg which enables us to make a connection to the database and execute sql queries.  
   
 ##### server.js  
-A small file for starting the server. 
+A small file for starting the server. The backend is started in the terminal with the command node server.js.
 
 ##### config.js  
 Contains configuration details for running the app, for example the port value, secret key, bcrypt work factor, and database name. The values are retrieved from .env file and default settings defined if they are not available in the .env. Note, the .env shouldn't be uploaded to GitHub as it contains senstive information. A .env needs to be created by each user/organisation using the app.
@@ -109,6 +107,13 @@ These tests can be executed in the terminal using the command npm test to run al
 Routes are tested using supertest as a test client. The tests are defined in separate files with the suffix filetotest.test.js.  The environment is set to test in each test file. This ensures that the test database is used.  The test database is empty and is populated with test data prior to the tests being run, then the test  is removed. Specific tests may add further test data such as testing the update of an issue; the update data is defined in the test and then used to as part of the sql query to update the test database which is then queried to check that the update has been successful.
 
 The route tests are executed in the terminal using the command jest or each individual test can be run by adding the name of the test file after jest.
+  
+### Starting the app  
+
+Both back and frontend are started in the terminal from the relevant directories.  
+  The command for the frontend is npm start  
+  For the backend it is node server.js
+  
   
 ### More to do  
 

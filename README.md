@@ -100,16 +100,13 @@ A small file for starting the server.
 ##### config.js  
 Contains configuration details for running the app, for example the port value, secret key, bcrypt work factor, and database name. The values are retrieved from .env file and default settings defined if they are not available in the .env. Note, the .env shouldn't be uploaded to GitHub as it contains senstive information. A .env needs to be created by each user/organisation using the app.
   
-  
-
-
 
   #### Tests  
 Component tests can be found in the same folder as the components. They are identified by componentName.test.js. They consist of a smoke and snapshot test and a number of tests using matcher methods from React Testing Library.  
   
 These tests can be executed in the terminal using the command npm test to run all tests or you can specifcy a test file to run.
   
-Route tests
+Routes are tested using supertest as a test client. The tests are defined in separate files with the suffix filetotest.test.  The environment is set to test in each test file. This ensures that the test database is used.  The test database is empty and is populated with test data prior to the tests being run, then the test  is removed. Specific tests may add further test data such as testing the update of an issue; the update data is defined in the test and then used to as part of the sql query to update the test database which is then queried to check that the update has been successful.
   
   
   Where they are and how to run them

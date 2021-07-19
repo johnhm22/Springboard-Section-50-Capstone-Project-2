@@ -92,7 +92,7 @@ Other key features of the backend are:
 These are files that define the format expected for json files such as those received from the frontend for login, register, update issue, and add issue. Using the library  jsonschema we can ensure that the format meets our expectations.
 
 ##### db.js  
-This file provides the means to connect to the database. 
+This file provides the means to connect to the database. It employs the tool pg which enables us to make a connection to the database and execute sql queries.
 
 
   #### Tests  

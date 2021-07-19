@@ -92,7 +92,16 @@ Other key features of the backend are:
 These are files that define the format expected for json files such as those received from the frontend for login, register, update issue, and add issue. Using the library  jsonschema we can ensure that the format meets our expectations.
 
 ##### db.js  
-This file provides the means to connect to the database. It employs the tool pg which enables us to make a connection to the database and execute sql queries.
+This file provides the details to connect to the database. It employs the tool pg which enables you to make a connection to the database and execute sql queries.  
+  
+##### server.js  
+A small file for starting the server. 
+
+##### config.js  
+Contains configuration details for running the app, for example the port value, secret key, bcrypt work factor, and database name. The values are retrieved from .env file and default settings defined if they are not available in the .env. Note, the .env shouldn't be uploaded to GitHub as it contains senstive information. A .env needs to be created by each user/organisation using the app.
+  
+  
+
 
 
   #### Tests  

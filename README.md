@@ -77,9 +77,10 @@ Another hook, useParams, is used to identify variables in the url string. For ex
 
 
   
-  #### Backend
-  
-  
+  #### Backend  
+The backend consists principally of routes and models. The route files, as the same suggests, define the url route and action that is taken when the url is hit by the browser. The models define the sql queries that are called by the routes. Such queries maybe, for example retrieving all issues from the database, which is then presented then returned  by the route to the frontend.
+
+
   
   #### Tests  
 Component tests can be found in the same folder as the components. They are identified by componentName.test.js. They consist of a smoke and snapshot test and a number of tests using matcher methods from React Testing Library.  

@@ -77,7 +77,7 @@ Another hook, useParams, is used to identify variables in the url string. For ex
 
 
   
-  #### Backend  
+#### Backend  
 The backend consists principally of routes and models. It is coded in Node.js. The route files, as the same suggests, define the url route and action that is taken when the url is hit by the browser. The models define the sql queries that are called by the routes. Such queries maybe, for example retrieving all issues from the database, which is then presented then returned  by the route to the frontend.
 
 Express is a well-known web development framework for node that is used by the routes. It has to be installed and required in the route files.  
@@ -101,20 +101,21 @@ A small file for starting the server.
 Contains configuration details for running the app, for example the port value, secret key, bcrypt work factor, and database name. The values are retrieved from .env file and default settings defined if they are not available in the .env. Note, the .env shouldn't be uploaded to GitHub as it contains senstive information. A .env needs to be created by each user/organisation using the app.
   
 
-  #### Tests  
+#### Tests  
 Component tests can be found in the same folder as the components. They are identified by componentName.test.js. They consist of a smoke and snapshot test and a number of tests using matcher methods from React Testing Library.  
   
 These tests can be executed in the terminal using the command npm test to run all tests or you can specifcy a test file to run.
   
-Routes are tested using supertest as a test client. The tests are defined in separate files with the suffix filetotest.test.  The environment is set to test in each test file. This ensures that the test database is used.  The test database is empty and is populated with test data prior to the tests being run, then the test  is removed. Specific tests may add further test data such as testing the update of an issue; the update data is defined in the test and then used to as part of the sql query to update the test database which is then queried to check that the update has been successful.
+Routes are tested using supertest as a test client. The tests are defined in separate files with the suffix filetotest.test.js.  The environment is set to test in each test file. This ensures that the test database is used.  The test database is empty and is populated with test data prior to the tests being run, then the test  is removed. Specific tests may add further test data such as testing the update of an issue; the update data is defined in the test and then used to as part of the sql query to update the test database which is then queried to check that the update has been successful.
+
+The route tests are executed in the terminal using the command jest or each individual test can be run by adding the name of the test file after jest.
   
+### More to do  
+
+There is much more that can be added to the app to make it even more useful. Here are some ideas:  
+* Provide the financial statement for each user which will show invoice charges for the  building service charge, payments made, and current balance
+* Make available a copy of the invoice for the service charge  
+* Allow users to make a payment against the invoice on the site  
+* Provide key documents such as the profit and loss for the building or details of major works  
   
-  Where they are and how to run them
-  
-  
-  
-  
-What the app does
-Tech used
-Challenges and what could be implemented in future
 

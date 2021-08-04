@@ -25,6 +25,8 @@ PORT:
 BCRYPT_WORK_FACTOR:
 Database:
 
+![](images/backend_startup.png)
+
 ##### Frontend
 In the console, navigate to the directory called frontend.  
 Run the command 'npm start'. This will open a new browser window showing the landing page for the app.  

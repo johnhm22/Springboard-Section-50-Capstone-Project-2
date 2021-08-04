@@ -7,8 +7,7 @@ It's worth first reading the description of the app below, but as this is key in
 ##### Getting the files
 Create a folder on your own computer, ensuring it's not already a git repository.  
 In this directory you can then run the command 'git clone https://github.com/johnhm22/Springboard-Section-50-Capstone-Project-2.git'  
-You copy the link from this repo by clicking on the 
-This fetches everything and puts it your folder.  
+You copy the link from this repo by clicking on the green button at the top right called 'Code' which you gives you the option to clone, download a zip file, or open with GitHub desktop. Choosing 'clone', fetches everything and puts it your folder.  
 
 ##### Setting up the database
 You'll need to install the database PostreSQL and then set up the tables. There is a script included here called schema.sql. It creates the database called estate_management; first dropping it if it already exists, creating it from new and creating tables. In the console (I used Windows Powershell), navigate to the same directory as the file schema.sql and then run the command 'psql < schema.sql'.  

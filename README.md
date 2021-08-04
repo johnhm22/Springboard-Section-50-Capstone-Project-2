@@ -25,6 +25,7 @@ PORT:
 BCRYPT_WORK_FACTOR:
 Database:
 
+![](images/backend_startup.png)
 
 ##### Frontend
 In the console, navigate to the directory called frontend.  

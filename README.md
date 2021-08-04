@@ -29,18 +29,32 @@ The structure of the code is divided into front and backend.
 
 
 #### How do I get the app up and running?  
-You can download all the files from GitHub using the command.  
-Create a directory on your own computer, ensuring it's not already a git repository.  
-In this directory you can then run the command 'git clone 
 
+##### Getting the files
+You can download all the files from GitHub using the command.  
+Create a folder on your own computer, ensuring it's not already a git repository.  
+In this directory you can then run the command 'git clone https://github.com/johnhm22/Springboard-Section-50-Capstone-Project-2.git'  
+This fetches everything and puts it your folder.  
+
+##### Setting up the database
 You'll need to install the database PostreSQL and then set up the tables. There is a script included here called schema.sql. It creates the database called estate_management; first dropping it if it already exists, creating it from new and creating tables. In the console (I used Windows Powershell), navigate to the same directory as the file schema.sql and then run the command 'psql < schema.sql'.  
 
-What now?
-Get the backend running 
+##### Installing dependencies
+In the console, run 'npm init' in both of the folders frontend and backend.  
+
+##### Running the backend
+In the console, navigate to the directory called backend  
+Run the command 'node server.js'  
+(If you have nodemon installed you can run 'nodemon server.js)  
+
+
 
 
 
 ##### Frontend
+In the console, navigate to the directory called frontend.  
+Run the command 'npm start'. This will open a new browser window.
+
 
 ###### Components
 The core of React is components; in this case functional components.

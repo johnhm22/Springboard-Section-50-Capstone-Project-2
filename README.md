@@ -27,6 +27,19 @@ Yes, it's simple, but answers a genuine requirement and can be added to.
 #### What technology was used in the coding?
 The structure of the code is divided into front and backend.
 
+
+#### How do I get the app up and running?  
+You can download all the files from GitHub using the command.  
+Create a directory on your own computer, ensuring it's not already a git repository.  
+In this directory you can then run the command 'git clone 
+
+You'll need to install the database PostreSQL and then set up the tables. There is a script included here called schema.sql. It creates the database called estate_management; first dropping it if it already exists, creating it from new and creating tables. In the console (I used Windows Powershell), navigate to the same directory as the file schema.sql and then run the command 'psql < schema.sql'.  
+
+What now?
+Get the backend running 
+
+
+
 ##### Frontend
 
 ###### Components

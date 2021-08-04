@@ -1,10 +1,10 @@
-process.env.NODE_ENV = "test";
 const db = require ("../db.js");
 const Issues = require("../models/issues");
 const Users = require("../models/users");
 const request = require("supertest");
 const app = require('../app');
 
+process.env.NODE_ENV = 'test';
 
 beforeAll( async function() {
 // add in an issue

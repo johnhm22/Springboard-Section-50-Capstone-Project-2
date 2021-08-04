@@ -5,9 +5,9 @@
 It's worth first reading the description of the app below, but as this is key information I've put it up front.
 
 ##### Getting the files
-You can download all the files from GitHub using the command.  
 Create a folder on your own computer, ensuring it's not already a git repository.  
 In this directory you can then run the command 'git clone https://github.com/johnhm22/Springboard-Section-50-Capstone-Project-2.git'  
+You copy the link from this repo by clicking on the 
 This fetches everything and puts it your folder.  
 
 ##### Setting up the database

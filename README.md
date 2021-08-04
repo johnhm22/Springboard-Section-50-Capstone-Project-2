@@ -46,14 +46,17 @@ In the console, run 'npm init' in both of the folders frontend and backend.
 In the console, navigate to the directory called backend  
 Run the command 'node server.js'  
 (If you have nodemon installed you can run 'nodemon server.js)  
-
-
-
-
+There are a number of console.log commands in the config.js file so on successful startup you will see in the console the following details:  
+SECRET_KEY:
+PORT:
+BCRYPT_WORK_FACTOR:
+Database:
 
 ##### Frontend
 In the console, navigate to the directory called frontend.  
-Run the command 'npm start'. This will open a new browser window.
+Run the command 'npm start'. This will open a new browser window showing the landing page for the app.  
+You can then start using the app by registering as a user.  
+Currently, by default, all users are non-admin. Admin rights are assigned by changing the field directly in the database.
 
 
 ###### Components

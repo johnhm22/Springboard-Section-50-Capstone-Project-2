@@ -10,7 +10,7 @@ There is a green button at the top right of this repository called 'Code' which 
 If you want to clone, copy the link and then run this command: 'git clone https://github.com/johnhm22/Springboard-Section-50-Capstone-Project-2.git'    
 
 ##### Setting up the database
-You'll need to install the database PostreSQL and then set up the tables. There is a script included here called schema.sql. It creates the database called estate_management; first dropping it if it already exists, creating it from new and creating tables. In the console (I used Windows Powershell), navigate to the same directory as the file schema.sql and then run the command: 'psql < schema.sql'.  
+You'll need to install the database PostgreSQL and then set up the tables. There is a script included here called schema.sql. It creates the database called estate_management; first dropping it if it already exists, creating it from new and creating tables. In the console (I used Windows Powershell), navigate to the same directory as the file schema.sql and then run the command: 'psql < schema.sql'.  
 
 ##### Installing dependencies
 In the console, run 'npm init' in both of the folders frontend and backend.  

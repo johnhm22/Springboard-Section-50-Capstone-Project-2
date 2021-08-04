@@ -1,34 +1,8 @@
 # ManageMyProperty
 ## Springboard-Section-50-Capstone-Project-2
 
-### Description
-This app is desgined to both demonstrate technical skills and also provide something of use, which I hope may be used. 
-Firstly, the motivation for the idea.  I own an apartment in a building which is managed by a managing agent. 
-Naturally, problems crop up and they need to be sorted. Currently, other than email or a call, there is no way to report an issue
-to the management. Even worse, there is no way to review the issues you have reported; look at the details, read the updates, check the progress.
-For the managing agent, except for spreadsheets or a word document, there is no means to centrally hold all the issues and reviewing them in one place.  
-
-Therefore, I thought I could answer this requirement and at the same time demonstrate some of the key coding skills and technologies I have picked up during the 
-Springboard Software Engineering course.
-
-#### What does the app do?
-Let's look in more detail at the functionality of the app. from the perspective of the user.
-If I am non-admin user, I have firstly to register before I can get access. This involves entering a series of details, such as username and password plus my property into a form.
-On submission, I am in!  
-
-Now I can create an issue, see my issues, update my issues, review updates made by admin users, and close my issues.
-I can also view my profile details.  
-
-As an admin user, the role of the managing agent who is responsible for resolving the problems, I can do all of the above, but, in addition, 
-review issues created by other users, update any of them and close them.  
-
-Yes, it's simple, but answers a genuine requirement and can be added to.
-
-#### What technology was used in the coding?
-The structure of the code is divided into front and backend.
-
-
-#### How do I get the app up and running?  
+### How do I get the app up and running?  
+It's worth first reading the description of the app below, but as this is key information I've put it up front.
 
 ##### Getting the files
 You can download all the files from GitHub using the command.  
@@ -57,7 +31,33 @@ In the console, navigate to the directory called frontend.
 Run the command 'npm start'. This will open a new browser window showing the landing page for the app.  
 You can then start using the app by registering as a user.  
 Currently, by default, all users are non-admin. Admin rights are assigned by changing the field directly in the database.
+  
 
+### Description
+This app is desgined to both demonstrate technical skills and also provide something of use, which I hope may be used. 
+Firstly, the motivation for the idea.  I own an apartment in a building which is managed by a managing agent. 
+Naturally, problems crop up and they need to be sorted. Currently, other than email or a call, there is no way to report an issue
+to the management. Even worse, there is no way to review the issues you have reported; look at the details, read the updates, check the progress.
+For the managing agent, except for spreadsheets or a word document, there is no means to centrally hold all the issues and reviewing them in one place.  
+
+Therefore, I thought I could answer this requirement and at the same time demonstrate some of the key coding skills and technologies I have picked up during the 
+Springboard Software Engineering course.
+
+#### What does the app do?
+Let's look in more detail at the functionality of the app. from the perspective of the user.
+If I am non-admin user, I have firstly to register before I can get access. This involves entering a series of details, such as username and password plus my property into a form.
+On submission, I am in!  
+
+Now I can create an issue, see my issues, update my issues, review updates made by admin users, and close my issues.
+I can also view my profile details.  
+
+As an admin user, the role of the managing agent who is responsible for resolving the problems, I can do all of the above, but, in addition, 
+review issues created by other users, update any of them and close them.  
+
+Yes, it's simple, but answers a genuine requirement and can be added to.
+
+#### What technology was used in the coding?
+The structure of the code is divided into front and backend.
 
 ###### Components
 The core of React is components; in this case functional components.
@@ -138,13 +138,7 @@ Routes are tested using supertest as a test client. The tests are defined in sep
 
 The route tests are executed in the terminal using the command jest or each individual test can be run by adding the name of the test file after jest.
   
-### Starting the app  
-
-Both back and frontend are started in the terminal from the relevant directories.  
-  The command for the frontend is npm start  
-  For the backend it is node server.js
-  
-  
+   
 ### More to do  
 
 There is much more that can be added to the app to make it even more useful. Here are some ideas:  

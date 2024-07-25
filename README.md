@@ -20,7 +20,7 @@ In the console, navigate to the directory called backend.
 Run the command 'node server.js'.  
 (If you have nodemon installed you can run 'nodemon server.js).  
 There are a number of console.log commands in the config.js file so on successful startup you will see in the console the following details:  
-SECRET_KEY: 
+SECRET_KEY:  
 PORT:  
 BCRYPT_WORK_FACTOR:  
 Database:  
